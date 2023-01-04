@@ -11,7 +11,11 @@ app.set('view engine', 'ejs')
 //mount middleware (app.use)
 
 //mount routes
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
+    res.redirect('/home')
+})
+
+app.get('/home', function(req, res) {
     res.render('home')
 })
 
